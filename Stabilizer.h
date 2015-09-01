@@ -20,8 +20,8 @@
 //#include <hrpModel/Body.h>
 
 #include <cnoid/Body>
-#include<cnoid/BodyLoader>
-#include<cnoid/VRMLBodyLoader>
+#include <cnoid/BodyLoader>
+#include <cnoid/VRMLBodyLoader>
 #include <cnoid/EigenTypes>
 #include <cnoid/JointPath>
 #include <cnoid/Jacobian>
@@ -292,6 +292,11 @@ class Stabilizer
   double force_dz_offset;
   Vector3 dzmp;
   Vector3 wzmp;
+
+  // ogawa
+  void setEefmParameters();
+  void setEndLinkName();
+  string end_link_name[LINKNUM];
 };
 
 
